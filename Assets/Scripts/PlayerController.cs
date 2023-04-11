@@ -39,9 +39,9 @@ public class PlayerController : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, jumpForce);
 
         }
-        if(collision.gameObject.tag == "Translate") //움직이는 장애물 구현 중
+        //if(collision.gameObject.tag == "Translate") //움직이는 장애물 구현 중
         {
-            Rigidbody2D.
+            //Rigidbody2D.
         }
 
     }
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     }
     public void Set()
     {
-        
-    
-    
+
+
+    }
 }
