@@ -8,13 +8,12 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 3f;
     public float jumpForce = 6f;
     Rigidbody2D rb;
+    public bool isGoal = false;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
-
     }
    
    
@@ -31,19 +30,20 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.transform.Translate(-0.05f, 0f, 0f);
         }
+        if(isGoal && Input.GetKeyDown(KeyCode.RightArrow) || isGoal && Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            rb.velocity = Vector2.zero;
+            rb.gravityScale = 1f;
+            isGoal = false;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Ground")
         {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, jumpForce);
-
         }
-        //if(collision.gameObject.tag == "Translate") //움직이는 장애물 구현 중
-        {
-            //Rigidbody2D.
-        }
-
+        
     }
     
 

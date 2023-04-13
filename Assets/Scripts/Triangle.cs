@@ -27,9 +27,10 @@ public class Triangle : MonoBehaviour
                 playerController.Die();
 
             }
+            
         }
+        
     }
-
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Ground")
@@ -39,5 +40,7 @@ public class Triangle : MonoBehaviour
 
 
     }
-    
+
+
+
 }

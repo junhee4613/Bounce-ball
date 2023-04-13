@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Ground : MonoBehaviour
 {
-    public GameObject ground;
-
+    public float rotate = -45f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,6 @@ public class Ground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ground.transform.Rotate(0f, 0f, -45f * Time.deltaTime);
+        gameObject.transform.Rotate(0f, 0f, rotate * Time.deltaTime);
     }
 }
