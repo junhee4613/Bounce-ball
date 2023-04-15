@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour
 {
+    public GameObject redGround;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,23 @@ public class GameDirector : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        if (!redGround.activeSelf)
+        {
+            StartCoroutine(RG2());
+        }
+        if (redGround.activeSelf)
+        {
+            StartCoroutine(RG());
+        }
+    }
+    IEnumerator RG()
+    {
+        yield return new WaitForSeconds(3.0f);
+        redGround.SetActive(false);
+    }
+    IEnumerator RG2()
+    {
+        yield return new WaitForSeconds(3.0f);
+        redGround.SetActive(true);
     }
 }

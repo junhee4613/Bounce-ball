@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = 1f;
             isGoal = false;
         }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

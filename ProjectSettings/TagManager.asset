@@ -7,6 +7,10 @@ TagManager:
   - Ground
   - player
   - Wall
+  - strate
+  - jump
+  - jumpBox
+  - RedGround
   layers:
   - Default
   - TransparentFX
