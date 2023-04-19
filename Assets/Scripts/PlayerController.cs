@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, jumpForce);
         }
+        GetComponent<AudioSource>().Play();
         
     }
     

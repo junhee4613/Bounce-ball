@@ -9,17 +9,6 @@ public class Goal : MonoBehaviour
     public float strate = 0f;
     public float jump = 0f;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (gameObject.tag == "strate" && other.tag == "player")
@@ -28,10 +17,11 @@ public class Goal : MonoBehaviour
             other.GetComponent<Rigidbody2D>().gravityScale = 0;
             other.GetComponent<Rigidbody2D>().velocity = new Vector3(strate, 0f, 0f);
             other.GetComponent<PlayerController>().isGoal = true;
+            GetComponent<AudioSource>().Play();
         }
         if(gameObject.tag == "jumpBox" && other.tag == "player")
         {
-            
+            GetComponent<AudioSource>().Play();
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, jump);
         }
     }

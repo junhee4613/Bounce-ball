@@ -7,12 +7,7 @@ public class RotationGround : MonoBehaviour
     public float rotatez = -45f;
     public float GRz = 45f;
     public Transform pivot;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+   
     // Update is called once per frame
     void Update()
     { 

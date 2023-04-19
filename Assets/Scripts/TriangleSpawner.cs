@@ -7,11 +7,6 @@ public class TriangleSpawner : MonoBehaviour
     public GameObject trianglePrefab;
     private float timeAfterSpawn;
     private float time = 3f;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
