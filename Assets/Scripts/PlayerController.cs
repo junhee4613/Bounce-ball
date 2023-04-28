@@ -56,9 +56,5 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void Set()
-    {
-
-
-    }
+   
 }
